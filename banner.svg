@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050912"/>
+      <stop offset="100%" stop-color="#0d1a33"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#39ff88"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1a2a4a" stroke-width="1" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect width="1280" height="320" fill="url(#grid)"/>
+
+  <!-- circuit lines -->
+  <g fill="none" stroke="url(#neon)" stroke-width="2.5" opacity="0.6" filter="url(#glow)">
+    <path d="M0 60 H180 V110 H260"/>
+    <path d="M0 270 H120 V220 H220"/>
+    <path d="M1280 50 H1100 V100 H1020"/>
+    <path d="M1280 270 H1160 V215 H1060"/>
+  </g>
+  <g fill="#050912" stroke="url(#neon)" stroke-width="2.5">
+    <circle cx="260" cy="110" r="6"/>
+    <circle cx="220" cy="220" r="6"/>
+    <circle cx="1020" cy="100" r="6"/>
+    <circle cx="1060" cy="215" r="6"/>
+  </g>
+
+  <!-- top bar like a terminal -->
+  <g>
+    <rect x="340" y="62" width="600" height="196" rx="12" fill="#07101f" fill-opacity="0.85" stroke="url(#neon)" stroke-width="2" filter="url(#glow)"/>
+    <circle cx="366" cy="84" r="6" fill="#ff5f56"/>
+    <circle cx="388" cy="84" r="6" fill="#ffbd2e"/>
+    <circle cx="410" cy="84" r="6" fill="#27c93f"/>
+    <text x="440" y="89" font-family="Consolas, Menlo, monospace" font-size="14" fill="#6b7fa6">~/yassinemar-dev</text>
+  </g>
+
+  <text x="372" y="155" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="20" fill="#39ff88">$ whoami</text>
+  <text x="372" y="205" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="46" font-weight="700" fill="url(#neon)" filter="url(#glow)">Yassine Marroun</text>
+  <text x="372" y="238" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="18" fill="#9fb3d9">Backend &amp; Full Stack Engineer | Security-minded</text>
+  <rect x="800" y="176" width="14" height="30" fill="#39ff88">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
